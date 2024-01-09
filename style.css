@@ -53,6 +53,9 @@ input:hover{
     cursor:pointer;
     border-color: hsl(0, 1%, 44%);
 }
+#error{
+    color: red;
+}
 hr{
     width: 80%;
     margin-left: 30px;
