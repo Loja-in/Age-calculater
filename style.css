@@ -49,6 +49,10 @@ body{
     font-size: 32px;
     font-weight: 700;
 }
+input:hover{
+    cursor:pointer;
+    border-color: hsl(0, 1%, 44%);
+}
 hr{
     width: 80%;
     margin-left: 30px;
