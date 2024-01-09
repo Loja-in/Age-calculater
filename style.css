@@ -11,7 +11,7 @@ body{
     height: 100%;
     box-sizing: border-box;
     background-color: hsl(0, 0%, 100%);
-    margin: 10% auto;
+    margin: 5% auto;
     text-align: center;
     box-shadow: 0px 20px 60px -8px rgba
     (0,0,0,.3);
@@ -91,4 +91,17 @@ button:hover{
 .det{
     color: #824EF8;
     margin: 5px;
+}
+footer{
+    font-size: 13px;
+    font-weight: 300;
+}
+footer a{
+    text-decoration: none;
+    font-weight: 400;
+}
+footer a:hover{
+    color: #c139eb;
+    cursor: pointer;
+    transition: .3s ease-in-out;
 }
