@@ -33,17 +33,3 @@ function validate() {
 
     return valid;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-let button = document.querySelector("#submit");
-button.addEventListener('submit',calcAge);
