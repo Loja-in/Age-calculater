@@ -27,6 +27,7 @@ body{
     margin-right: 20%;
     margin-top: 20px;
     margin-bottom: 20px;
+    position: relative;
 
 }
 .header label{
@@ -53,8 +54,16 @@ input:hover{
     cursor:pointer;
     border-color: hsl(0, 1%, 44%);
 }
-#error{
+.error {
     color: red;
+    position: absolute;
+    left: 20px;
+    top: 100%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    padding: 0 5px;
+    font-weight: 300;
+    font-style: italic;
 }
 hr{
     width: 80%;
