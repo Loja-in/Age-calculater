@@ -1,6 +1,6 @@
-let d = document.getElementById('day').value;
-let m = document.getElementById('month').value;
-let y = document.getElementById('year').value;
+let d = document.getElementById('day');
+let m = document.getElementById('month');
+let y = document.getElementById('year');
 let year = document.getElementById('age-year');
 let month = document.getElementById('age-month');
 let day = document.getElementById('age-day');
@@ -12,7 +12,7 @@ submitBtn.addEventListener("click", function(){
         span.innerHTML = "Invalide year";
         return;
     }
-    const dob = new Date(y, m - 1, d);
+    const dob = new Date(y.value, m.value - 1, d.value);
     const diffMs = Date.now() - dob.getTime();
     const diffYears = Math.floor(diffMs / 86400000 / 365.25);
     const diffMonths = Math.floor((diffMs / 86400000 / 365.25 - diffYears) * 12);
