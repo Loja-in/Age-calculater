@@ -25,6 +25,9 @@ submitBtn.addEventListener("click", function() {
         return;
     }
 else{
+    spanYear.innerHTML = "  ";
+    spanMonth.innerHTML = "  ";
+    spanDay.innerHTML = "  ";
     const dob = new Date(+y.value, +m.value - 1, +d.value);
     const diffMs = Date.now() - dob.getTime();
     const diffYears = Math.floor(diffMs / 86400000 / 365.25);
