@@ -1,35 +1,28 @@
-function checkInput(){
-    let input = document.querySelector(".input");
-    if(input == " "){
-        let span = document.querySelector("#error")
-        span.innerHTML = "This field is required";
+let d = document.getElementById('day').value;
+let m = document.getElementById('month').value;
+let y = document.getElementById('year').value;
+let year = document.getElementById('age-year');
+let month = document.getElementById('age-month');
+let day = document.getElementById('age-day');
+let submitBtn = document.querySelector('#submit');
+submitBtn.addEventListener("click", function(){
+    let currentYear = new Date.getFullYear();
+    let span = document.querySelector(".error")
+    if (d > 31 || m > 12 || y > currentYear){
+        span.innerHTML = "Invalide year";
+        return;
     }
-    else{
-        span.innerHTML = "";
-    }
-}
-function validate() {
-    const day = document.getElementById('day').value;
-    const month = document.getElementById('month').value;
-    const year = document.getElementById('year').value;
+    const dob = new Date(y, m - 1, d);
+    const diffMs = Date.now() - dob.getTime();
+    const diffYears = Math.floor(diffMs / 86400000 / 365.25);
+    const diffMonths = Math.floor((diffMs / 86400000 / 365.25 - diffYears) * 12);
+    const diffDays = Math.floor((diffMs / 86400000) - (diffYears * 365.25) - (diffMonths * 30.44));
 
-    let valid = true;
+  // Display the age
+  year.innerHTML = diffYears;
+  month.innerHTML = diffMonths;
+  day.innerHTML = diffDays;
+});
+    
 
-    if(day < 1 || day > 31) {
-        valid = false;
-        document.getElementById('error').innerHTML = "invalid day.";
-    }
 
-    if(month < 1 || month > 12) {
-        valid = false;
-        document.getElementById('error').innerHTML = "invalid month.";
-    }
-
-    const currentYear = new Date().getFullYear();
-    if(year < 1900 || year > currentYear) {
-        valid = false;
-        document.getElementById('error').innerHTML = "invalid year.";
-    }
-
-    return valid;
-}

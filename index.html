@@ -11,22 +11,24 @@
 </head>
 <body>
 <div class="container">
-        <div class="header">
+        <div class="header" id="age-form">
+            
                 <div class="input">
                     <label for="">DAY</label>
                     <input type="number" placeholder="DD" class="input" id="day"  required>
-                    <span id="error"></span>
+                    <span class="error"></span>
                 </div>
                 <div class="input">
                     <label for="">MONTH</label>
                     <input type="number" placeholder="MM"  class="input" id="month"  required>
-                    <span id="error"></span>
+                    <span class="error"></span>
                 </div>
                 <div class="input">
                     <label for="">YEAR</label>
                     <input type="number" placeholder="YYYY"  class="input" id="year"  required>
-                    <span id="error"></span>
+                    <span class="error"></span>
                 </div>
+            
         </div>
         <hr>
         <button type="submit" id="submit"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
@@ -39,17 +41,17 @@
             <div class="details">
 
                 <h1>
-                    <span class="det">--</span>years
+                    <span id="age-year">--</span>years
                 </h1>
             </div>
             <div class="details">
                 <h1>
-                    <span class="det">--</span>months
+                    <span id="age-month">--</span>months
                 </h1>
             </div>
             <div class="details">
                 <h1>
-                    <span class="det">--</span>days
+                    <span id="age-day">--</span>days
                 </h1>
             </div>
         </div>

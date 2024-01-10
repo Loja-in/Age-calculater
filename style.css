@@ -91,7 +91,8 @@ button:hover{
     font-weight: 800;
     
 }
-.det{
+#age-year, #age-month,
+#age-day{
     color: #824EF8;
     margin: 5px;
 }
