@@ -14,14 +14,21 @@ submitBtn.addEventListener("click", function() {
     let dayValue = parseInt(d.value, 10);
     let yearValue = parseInt(y.value, 10);
     let currentYear = new Date().getFullYear();
-    if (dayValue < 1 || dayValue > 31) {
+    if (dayValue < 1 || dayValue > 31 ) {
         spanDay.innerHTML = "Invalide value";
+        spanYear.innerHTML = "  ";
+        spanMonth.innerHTML = "  ";
+
         return;
-    }else if (monthValue < 1 || monthValue > 12) {
+    }else if (monthValue < 1 || monthValue > 12 ) {
         spanMonth.innerHTML = "Invalide value";
+        spanYear.innerHTML = "  ";
+        spanDay.innerHTML = "  ";
         return;
     }else if (yearValue < 1900 || yearValue > currentYear) {
         spanYear.innerHTML = "Invalide value";
+        spanMonth.innerHTML = "  ";
+        spanDay.innerHTML = "  ";
         return;
     }
 else{

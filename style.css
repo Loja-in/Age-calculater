@@ -54,7 +54,7 @@ input:hover{
     cursor:pointer;
     border-color: hsl(0, 1%, 44%);
 }
-.error {
+#error-day {
     color: red;
     position: absolute;
     left: 20px;
@@ -64,6 +64,28 @@ input:hover{
     padding: 0 5px;
     font-weight: 300;
     font-style: italic;
+}
+#error-month{
+    left: 35%;
+    top: 100%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    padding: 0 5px;
+    font-weight: 300;
+    font-style: italic;
+    color: red;
+    position: absolute;
+}
+#error-year{
+    left: 68%;
+    top: 100%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    padding: 0 5px;
+    font-weight: 300;
+    font-style: italic;
+    color: red;
+    position: absolute;
 }
 hr{
     width: 80%;
